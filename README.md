@@ -5,6 +5,8 @@ This readme may differ from the one in the binary release, this is the definiati
 
 NOTE: You do not need to enter an ip address or port number if you just want to start Shizuku
 
+Requirements: .NET 3.5, adb(included in the binary release), Windows 7, 8, 8.1, or 10(should work on XP, but haven't tested it), Shizuku
+
 How to just start Shizuku
 
 0) Enable debuging mode on your phone
