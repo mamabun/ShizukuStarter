@@ -141,7 +141,15 @@ Partial Class Form1
         Dim argu1 As String = "kill-server"
 
         pg = path + "\" + prog_name + argu1
-        Shell(pg, AppWinStyle.Hide)
+
+        ' Basic check if file exists check so we don't outright crash
+        If System.IO.File.Exists(pg) = False Then
+            MessageBox.Show("adb not found. Please make sure it is in the directory")
+            Close()
+        Else
+            Shell(pg, AppWinStyle.Hide)
+        End If
+
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
